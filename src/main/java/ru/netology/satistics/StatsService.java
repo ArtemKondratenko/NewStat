@@ -6,17 +6,19 @@ public class StatsService {
         int totalSum = 0;
         for (int i = 0; i < arr.length; i++) {
             totalSum += arr[i];
-        }return totalSum;
+        }
+        return totalSum;
     }
 
-    public  int averageSalesPerMonth(int[] arr) {
+    public int averageSalesPerMonth(int[] arr) {
         int totalSum = 0;
         for (int i = 0; i < arr.length; i++) {
             totalSum += arr[i];
-        }return totalSum / arr.length;
+        }
+        return totalSum / arr.length;
     }
 
-    public  int maxSales(int[] arr) {
+    public int maxSales(int[] arr) {
         int maxMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : arr) {
@@ -29,7 +31,8 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
-    public  int minSales(int[] arr) {
+
+    public int minSales(int[] arr) {
         int minMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : arr) {
@@ -42,23 +45,27 @@ public class StatsService {
         }
         return minMonth + 1;
     }
-    public  int numberMonchsBelowAverage(int[] arr) {
+
+    public int numberMonchsBelowAverage(int[] arr) {
         int avarage = averageSalesPerMonth(arr);
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < avarage) {
                 count++;
             }
-        }return  count;
+        }
+        return count;
     }
-    public  int numberMonchsAboveAverage(int[] arr) {
+
+    public int numberMonchsAboveAverage(int[] arr) {
         int avarage = averageSalesPerMonth(arr);
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > avarage) {
                 count++;
             }
-        }return  count;
+        }
+        return count;
     }
 
 }
